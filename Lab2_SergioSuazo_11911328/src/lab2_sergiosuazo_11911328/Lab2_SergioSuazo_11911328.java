@@ -9,7 +9,7 @@ public class Lab2_SergioSuazo_11911328 {
     public static void main(String[] args) {
         ArrayList<Universidades> lista=new ArrayList<>();
         int opcion =0;
-        boolean login=false;
+        boolean login=false,nacional=false;
         while(opcion!=9)
         {
             System.out.println(""
@@ -82,6 +82,21 @@ public class Lab2_SergioSuazo_11911328 {
                     password=leer.next();                
                 }
                 login=true;
+            }
+            if(opcion==4)
+            {
+                int pos;
+                System.out.println(lista);
+                System.out.println("Ingrese la Universidad que desee avanzar: ");
+                pos=leer.nextInt();
+                if(lista.get(pos).getNivel()==5||lista.get(pos).getNivel()==4||nacional)
+                {
+                    System.out.println("La Universidad seleccionada no se puede avanzar");
+                }
+                else
+                {
+                    
+                }
             }
         }
     }
