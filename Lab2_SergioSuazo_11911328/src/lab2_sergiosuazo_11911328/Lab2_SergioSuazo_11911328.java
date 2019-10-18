@@ -9,6 +9,7 @@ public class Lab2_SergioSuazo_11911328 {
     public static void main(String[] args) {
         ArrayList<Universidades> lista=new ArrayList<>();
         int opcion =0;
+        boolean login=false;
         while(opcion!=9)
         {
             System.out.println(""
@@ -21,7 +22,7 @@ public class Lab2_SergioSuazo_11911328 {
                     + "7- Descender Universidad"
                     + "8- Random"
                     + "9- Salir");
-            if(opcion==1)
+            if(opcion==1&&login)
             {
                 String nombre,sucursal,rector;
                 int maestros,estudiantes,nivel,año;
@@ -49,7 +50,7 @@ public class Lab2_SergioSuazo_11911328 {
                 u.setNivel(nivel);
                 lista.add(u);
             }
-            if(opcion==2)
+            if(opcion==2&&login)
             {
                 int pos;
                 System.out.print("Posicion a eliminar");
@@ -62,6 +63,25 @@ public class Lab2_SergioSuazo_11911328 {
                 {
                     System.out.println("Posicion equivocada");
                 }                
+            }
+            if(opcion==3)
+            {
+                String usuario,password;
+                System.out.print("Ingrese el usuario: ");
+                usuario=leer.next();
+                while(!"leobanegas".equals(usuario))
+                {
+                    System.out.print("usuario incorrecto, ingrese nuevamente: ");
+                    usuario=leer.next();                
+                }
+                System.out.print("Ingrese la contraseña: ");
+                password=leer.next();
+                while(!"99".equals(password))
+                {
+                    System.out.print("contraseña incorrecta, ingrese nuevamente: ");
+                    password=leer.next();                
+                }
+                login=true;
             }
         }
     }

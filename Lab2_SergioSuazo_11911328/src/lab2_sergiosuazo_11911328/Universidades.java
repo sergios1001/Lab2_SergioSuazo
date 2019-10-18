@@ -5,6 +5,7 @@ public class Universidades
 {
     private String nombre,rector,sucursal;
     private int año,maestros,estudiantes,nivel;
+
     
     public Universidades()
     {
