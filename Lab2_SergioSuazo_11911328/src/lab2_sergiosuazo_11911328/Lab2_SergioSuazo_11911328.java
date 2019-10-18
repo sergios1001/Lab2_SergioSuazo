@@ -83,7 +83,7 @@ public class Lab2_SergioSuazo_11911328 {
                 }
                 login=true;
             }
-            if(opcion==4)
+            if(opcion==4&&login)
             {
                 int pos;
                 System.out.println(lista);
@@ -95,9 +95,25 @@ public class Lab2_SergioSuazo_11911328 {
                 }
                 else
                 {
+                    int ad;
+                    ad=lista.get(pos).getNivel();
+                    if(ad==1)
+                    {
+                        ad=4;
+                    }
+                    else if(ad==2)
+                    {
+                        ad=3;
+                    }
+                    else if(ad==3)
+                    {
+                        ad=5;
+                    }
                     
+                    lista.get(pos).setNivel(ad);
                 }
             }
+            
         }
     }
     
