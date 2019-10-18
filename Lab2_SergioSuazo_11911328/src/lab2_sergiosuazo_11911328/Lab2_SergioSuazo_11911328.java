@@ -113,7 +113,49 @@ public class Lab2_SergioSuazo_11911328 {
                     lista.get(pos).setNivel(ad);
                 }
             }
-            
+            if(opcion==5&&login)
+            {
+                String salida="";
+                for (Object t : lista) 
+                {
+                    salida+=""+lista.indexOf(t)+"- "+t+"\n";
+                }
+                System.out.print(salida);;
+            }
+            if(opcion==6&&login)
+            {
+                
+            }
+            if(opcion==7&&login)
+            {
+                int pos;
+                System.out.println(lista);
+                System.out.println("Ingrese la Universidad que desee descender: ");
+                pos=leer.nextInt();
+                if(lista.get(pos).getNivel()==1||lista.get(pos).getNivel()==2)
+                {
+                    lista.remove(pos);
+                }
+                else
+                {
+                    int ad;
+                    ad=lista.get(pos).getNivel();
+                    if(ad==3)
+                    {
+                        ad=2;
+                    }
+                    else if(ad==4)
+                    {
+                        ad=1;
+                    }
+                    else if(ad==5)
+                    {
+                        ad=3;
+                    }
+                    
+                    lista.get(pos).setNivel(ad);
+                }                
+            }
         }
     }
     
