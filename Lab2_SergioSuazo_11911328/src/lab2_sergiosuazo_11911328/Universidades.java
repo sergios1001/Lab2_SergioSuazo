@@ -111,7 +111,7 @@ public class Universidades
         {
             costo=12000;
         }
-        if(nivel==1)
+        if(nivel==5)
         {
             costo=500;
         }
@@ -125,6 +125,6 @@ public class Universidades
     @Override
     public String toString()
     {
-        return ""+nombre+" "+sucursal;
+        return ""+nombre+" "+sucursal+" "+nivelS+" "+costo;
     }
 }

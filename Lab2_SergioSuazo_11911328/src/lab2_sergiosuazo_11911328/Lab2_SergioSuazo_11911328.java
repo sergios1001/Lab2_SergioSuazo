@@ -3,9 +3,12 @@ package lab2_sergiosuazo_11911328;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Lab2_SergioSuazo_11911328 {
     static Scanner leer=new Scanner(System.in);
+    static Universidades u=new Universidades();
+    static Random rand=new Random();
     public static void main(String[] args) {
         ArrayList<Universidades> lista=new ArrayList<>();
         int opcion =0;
@@ -114,6 +117,8 @@ public class Lab2_SergioSuazo_11911328 {
                     }
                     
                     lista.get(pos).setNivel(ad);
+                    lista.get(pos).setNivelS(ad);
+                    lista.get(pos).setCosto(ad);
                 }
             }
             if(opcion==5&&login)
@@ -123,10 +128,18 @@ public class Lab2_SergioSuazo_11911328 {
                 {
                     salida+=""+lista.indexOf(t)+"- "+t+"\n";
                 }
-                System.out.print(salida);;
+                System.out.print(salida);
             }
             if(opcion==6&&login)
             {
+                int mod;
+                System.out.println("Ingrese lo que quiere modificar: \n"
+                        + "1- Nombre universidad\n"
+                        + "2- Sucursal\n"
+                        + "3- Cantidad estudiantes\n"
+                        + "4- Cantidad maestros\n"
+                        + "5- Año\n"
+                        + "6- Rector\n");
                 
             }
             if(opcion==7&&login)
@@ -146,22 +159,34 @@ public class Lab2_SergioSuazo_11911328 {
                     if(ad==3)
                     {
                         ad=2;
+                        lista.get(pos).setCosto(ad);
                     }
                     else if(ad==4)
                     {
                         ad=1;
+                        lista.get(pos).setCosto(ad);
                     }
                     else if(ad==5)
                     {
                         ad=3;
+                        lista.get(pos).setCosto(ad);
+                        
                     }
                     
                     lista.get(pos).setNivel(ad);
+                    lista.get(pos).setNivelS(ad);
+                    lista.get(pos).setCosto(ad);
                 }                
             }
-            if(opcion==8)
+            if(opcion==8&&login)
             {
-                
+                int r=rand.nextInt(lista.size());
+                if(lista.get(r).getNivel()==3)
+                {
+                    lista.get(r).setNivel(5);
+                    lista.get(r).setCosto(5);
+                    lista.get(r).setNivelS(5);
+                }
             }
         }
     }
