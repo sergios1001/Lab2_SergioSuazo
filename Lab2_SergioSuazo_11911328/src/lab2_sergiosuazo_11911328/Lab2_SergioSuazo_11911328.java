@@ -25,7 +25,7 @@ public class Lab2_SergioSuazo_11911328 {
             if(opcion==1&&login)
             {
                 String nombre,sucursal,rector;
-                int maestros,estudiantes,nivel,año;
+                int maestros,estudiantes,nivel,año,costo;
                 System.out.print("Ingrese nombre de la Universidad: ");
                 nombre=leer.next();
                 System.out.print("Ingrese nombre del rector: ");
@@ -48,6 +48,8 @@ public class Lab2_SergioSuazo_11911328 {
                 u.setEstudiantes(estudiantes);
                 u.setAño(año);
                 u.setNivel(nivel);
+                u.setNivelS(nivel);
+                u.setCosto(nivel);
                 lista.add(u);
             }
             if(opcion==2&&login)
@@ -108,6 +110,7 @@ public class Lab2_SergioSuazo_11911328 {
                     else if(ad==3)
                     {
                         ad=5;
+                        nacional=true;
                     }
                     
                     lista.get(pos).setNivel(ad);
@@ -155,6 +158,10 @@ public class Lab2_SergioSuazo_11911328 {
                     
                     lista.get(pos).setNivel(ad);
                 }                
+            }
+            if(opcion==8)
+            {
+                
             }
         }
     }
